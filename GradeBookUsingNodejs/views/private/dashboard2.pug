@@ -1,0 +1,102 @@
+doctype html
+head
+  meta(charset='utf-8')
+  link(rel='icon' type='image/png' href='/img/favicon.ico')
+  link(rel='stylesheet' href='/css/table.css')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
+  title Student GradeBook
+  meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport')
+  meta(name='viewport' content='width=device-width')
+  link(href='/css/bootstrap.min.css' rel='stylesheet')
+  link(href='/css/animate.min.css' rel='stylesheet')
+  link(href='/css/light-bootstrap-dashboard.css?v=1.4.0' rel='stylesheet')
+  link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet')
+  link(href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css')
+  link(href='/css/pe-icon-7-stroke.css' rel='stylesheet')
+  link(rel='stylesheet' href='/css/table.css')
+.wrapper
+  .sidebar(data-color='purple' data-image='/img/sidebar-5.jpg')
+    .sidebar-wrapper
+      .logo
+        a.simple-text(href='http://www.creative-tim.com')
+          | Welcome To GradeBook!
+      ul.nav
+        li.active
+          a(href='dashboard.html')
+            i.pe-7s-graph
+            p Dashboard
+  .main-panel
+    nav.navbar.navbar-default.navbar-fixed
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type='button' data-toggle='collapse' data-target='#navigation-example-2')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') Student Dashboard
+          
+        .collapse.navbar-collapse
+          
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/Gradebook/logout')
+                p Log out
+            li.separator.hidden-lg
+      .content
+        
+          .row
+            
+              
+                .header
+                  
+                .content
+                  table#t01
+                    tr
+                      th First Name
+                      th Last Name
+                      th Test 1
+                      th Test 2
+                      th Test 3
+                      th Average
+                      th Grade
+                    
+                    tr
+                    td #{user.FirstName}
+                    td #{user.LastName}
+                    td #{user.test1}
+                    td #{user.test2}
+                    td #{user.test3}
+                    td #{user.average}
+                    td #{user.grade}
+                
+
+      
+
+
+
+
+
+script(src='/js/table.js')
+script(src='/js/jquery.3.2.1.min.js' type='text/javascript')
+script(src='/js/bootstrap.min.js' type='text/javascript')
+
+script(src='/js/chartist.min.js')
+script(src='/js/bootstrap-notify.js')
+
+script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE')
+script(src='/js/light-bootstrap-dashboard.js?v=1.4.0')
+script(src='/js/demo.js')
+script(type='text/javascript').
+  $(document).ready(function(){
+  demo.initChartist();
+  $.notify({
+  icon: 'pe-7s-gift',
+  message: "Welcome to <b>Student GradeBook</b> - Bishal Khadka."
+  },{
+  type: 'info',
+  timer: 4000
+  });
+  });
+
+

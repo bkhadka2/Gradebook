@@ -1,0 +1,23 @@
+doctype html
+head
+  link(rel='stylesheet' href='/css/table.css')
+//link(rel='stylesheet' href='/css/table.css')
+h2 Student grades
+table#t01
+  tr
+    th Firstname
+    th Lastname
+    th test1
+    th test2
+    th test3
+    th average
+  for users in user
+    tr
+      td #{users.FirstName}
+      td #{users.LastName}
+      td #{users.test1}
+      td #{users.test2}
+      td #{users.test3}
+      td #{users.average}
+      td
+        -var link = "/GradeBook/signUp"+user._id;

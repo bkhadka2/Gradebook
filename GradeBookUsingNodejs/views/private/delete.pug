@@ -1,0 +1,15 @@
+head
+  title  Delete Student 
+  link(rel='stylesheet' type='text/css' href='/css/style.css')
+form(method='post' action="/GradeBook/delete")
+  #login-box
+    .left-box
+      h1  Delete Student Record 
+      input(type="hidden" name=userID value=user.FirstName)
+      input(type='text' name='FirstName' placeholder='First Name')
+      input(type='text' name='LastName' placeholder='Last Name')
+      input(type='text' name='email' placeholder='Email')
+      input(type='submit' name='Delete' value='Delete')
+      
+
+    .right-box
